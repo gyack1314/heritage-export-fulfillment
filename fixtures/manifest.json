@@ -135,6 +135,24 @@
       "unique_key": [
         "row_id"
       ]
+    },
+    {
+      "file": "fixtures/production.jsonl",
+      "rows": 720,
+      "sha256": "31522accf750ecef968a94d08dd5b860e210d14d758df6e1ec6286dc4f61bc5b",
+      "columns": [
+        "event",
+        "line_id",
+        "lot_id",
+        "occurred_day",
+        "production_id",
+        "quantity",
+        "received_day",
+        "row_id"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
     }
   ],
   "scope": "本地合成的原始来源观察、业务政策与操作请求。"
