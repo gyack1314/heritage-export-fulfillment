@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "synthetic": true,
+  "project": "跨境手作履约的承诺队列与延误风险分析",
+  "tables": [
+    {
+      "file": "fixtures/order_lines.jsonl",
+      "rows": 360,
+      "sha256": "3015c93d700d6d89037562258a7708da8b70ec3895e8e0a5c97ab915ebf6b9d5",
+      "columns": [
+        "accepted_day",
+        "country",
+        "craft",
+        "customer",
+        "line_id",
+        "order_id",
+        "quantity",
+        "received_day",
+        "row_id",
+        "value_minor"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/promises.jsonl",
+      "rows": 400,
+      "sha256": "7cd6909c9c0da4ce3ab4513a2a4b2aee445c439a64e4be9dc973f46e874c934f",
+      "columns": [
+        "order_id",
+        "promise_id",
+        "promised_day",
+        "quantity",
+        "received_day",
+        "revision",
+        "row_id"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/parcel_contents.jsonl",
+      "rows": 720,
+      "sha256": "a93fe8f68a1e1b7564fd3983e5022f1316ecac7bac218a33e9a273139c2a5377",
+      "columns": [
+        "line_id",
+        "lot_id",
+        "parcel_id",
+        "quantity",
+        "relation",
+        "row_id"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/logistics.jsonl",
+      "rows": 1351,
+      "sha256": "945e768cc1a70b143c6f3898c9a149eec688c77c9c4af1d2b5527b85ddf8476e",
+      "columns": [
+        "event",
+        "occurred_day",
+        "parcel_id",
+        "received_day",
+        "row_id",
+        "scan_id"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/cause_intervals.jsonl",
+      "rows": 87,
+      "sha256": "9bc96b85251bba7e51b8fdbac879bd007cec5d6ac1b0278ca0e20ef1ebe966bd",
+      "columns": [
+        "end",
+        "order_id",
+        "quantity",
+        "reason",
+        "received_day",
+        "row_id",
+        "start"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/contact_receipts.jsonl",
+      "rows": 1,
+      "sha256": "8cf2a3efa0136b04b806ba11deecb307a051f721e84c52b338649632c4fef01e",
+      "columns": [
+        "contact_day",
+        "contact_id",
+        "customer",
+        "outcome",
+        "row_id"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/contact_permissions.jsonl",
+      "rows": 90,
+      "sha256": "262995b0b1189d1f80966e49f56eed20fed74638b9b223ecb36632c309f3a1b5",
+      "columns": [
+        "allowed_weekdays",
+        "consented",
+        "customer",
+        "row_id",
+        "timezone"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    },
+    {
+      "file": "fixtures/refunds.jsonl",
+      "rows": 19,
+      "sha256": "c078a6e59992084a9cfc04ce89e6fedce4dc97bebbbc07bbc089eb5d8ff9f29a",
+      "columns": [
+        "amount_minor",
+        "cancel_quantity",
+        "cancellation_confirmed",
+        "order_id",
+        "received_day",
+        "refund_id",
+        "row_id"
+      ],
+      "unique_key": [
+        "row_id"
+      ]
+    }
+  ],
+  "scope": "本地合成的原始来源观察、业务政策与操作请求。"
+}
